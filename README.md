@@ -8,7 +8,7 @@ To run this ShowCase do the following
 * Build the eWalletShowCase
 * Start the Hyperledger
 * Run the eWalletShowCase chaincode
-* Run the eWalletShowCase client
+* Run the Car client
 * Query the content of the blockchain via REST API
 
 ## Checkout the Source Code of Hyperledger Fabric
@@ -42,5 +42,10 @@ To run the chaincode, just run the mainclass from the distribution which gradle 
 donoswald@notpad$ cd build/distributions
 donoswald@notpad$ unzip eWalletShowCase.zip
 donoswald@notpad$ ./eWalletShowCase/bin/EWalletMain
+```
+## Run the Car Client
+Import the project to your favorite IDE and create a run configuration vor the Car class, giving it a license-number as a startup parameter
+```
+donoswald@notpad$ java $CLASS_PATH client.Car zh-123-456
 ```
 
