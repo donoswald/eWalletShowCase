@@ -49,7 +49,7 @@ Import the project to your favorite IDE and create a run configuration for the C
 donoswald@notpad$ java $CLASS_PATH client.Car zh-123-456
 ```
 ## Query the Blockchain
-To query the blockchain, it is best to act with [SOAP UI](https://www.soapui.org/) 
+To query the blockchain, it is best to act with [SOAP UI](https://www.soapui.org/).
 Create a new endpoint to http://loclehost:7050/chaincode and execute the following POST request
 ```
 {
