@@ -44,7 +44,7 @@ donoswald@notpad$ unzip eWalletShowCase.zip
 donoswald@notpad$ ./eWalletShowCase/bin/EWalletMain
 ```
 ## Run the Car Client
-Import the project to your favorite IDE and create a run configuration vor the Car class, giving it a license-number as a startup parameter
+Import the project to your favorite IDE and create a run configuration for the Car class, giving it a license-number as a startup parameter
 ```
 donoswald@notpad$ java $CLASS_PATH client.Car zh-123-456
 ```
