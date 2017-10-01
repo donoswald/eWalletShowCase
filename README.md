@@ -54,17 +54,17 @@ Create a new endpoint to http://loclehost:7050/chaincode and execute the followi
 ```
 {
 "jsonrpc": "2.0",
-  "method": "invoke",
+  "method": "query",
   "params": {
-    "type": 4,
+    "type": 1,
     "chaincodeID":{
         "name": "eWallet"
     },
     "CtorMsg": {
-        "args": ["put","zh-2233", "{\"date\":\"2017-10-01T14:38:12\", \"amount\":\"20.0\", \"type\":\"FUEL\"}"]
+        "args": ["query","zh-123-456"]
     }
   },
-  "id": 1
+  "id": 2
 }
 ```
 
