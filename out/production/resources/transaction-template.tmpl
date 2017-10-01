@@ -1,0 +1,14 @@
+{
+"jsonrpc": "2.0",
+  "method": "invoke",
+  "params": {
+    "type": 4,
+    "chaincodeID":{
+        "name": "eWallet"
+    },
+    "CtorMsg": {
+        "args": ["put","${license-number}", "{\"date\":\"${date}\", \"amount\":\"${amount}\", \"type\":\"${type}\"}"]
+    }
+  },
+  "id": 1
+}

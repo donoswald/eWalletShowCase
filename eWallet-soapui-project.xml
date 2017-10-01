@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="6af3a1e1-a0a6-4f6a-aadc-73c0819c11d4" activeEnvironment="Default" name="eWallet" resourceRoot="" soapui-version="5.3.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="e2bc851e-92ea-4f17-b733-9562b123506e" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:7050" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://localhost:7050</con:endpoint></con:endpoints><con:resource name="" path="/chain" id="7d160784-33cc-4571-8b26-673ec039faca"><con:settings/><con:parameters/><con:method name="1" id="05252cdd-26ff-4967-9052-8c5b0d3b21ea" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:cha="http://localhost/chain">cha:Response</con:element></con:representation><con:request name="Request 1" id="f9514599-e5bd-4954-9403-83f4456a5476" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:7050</con:endpoint><con:request/><con:originalUri>http://localhost/chain</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource><con:resource name="chaincode" path="/chaincode" id="798e2841-e6d8-4451-9ec3-a65351fd34bb"><con:settings/><con:parameters/><con:method name="deploy" id="2da46272-0d09-4099-9392-7abbd6392f88" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:cha="http://localhost/chaincode">cha:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:request name="Request 1" id="11a02ae8-3123-4f91-b07f-6721e78041cf" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:7050</con:endpoint><con:request>{
+"jsonrpc": "2.0",
+  "method": "deploy",
+  "params": {
+    "type": 1,
+    "chaincodeID":{
+        "name": "eWallet"
+    },
+    "CtorMsg": {
+        "args": [""]
+    }
+  },
+  "id": 1
+}</con:request><con:originalUri>http://localhost/chaincode</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method><con:method name="invoke" id="829fde38-33b8-4d48-9ec9-4c90e96a6795" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:cha="http://localhost/chaincode">cha:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xmlns:cha="http://localhost/chaincode">cha:Fault</con:element></con:representation><con:request name="put" id="eb73b3ce-f22d-4254-acf1-a74b26525a87" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:7050</con:endpoint><con:request>{
+"jsonrpc": "2.0",
+  "method": "invoke",
+  "params": {
+    "type": 1,
+    "chaincodeID":{
+        "name": "eWallet"
+    },
+    "CtorMsg": {
+        "args": ["put","zh-2233", "{\"date\":\"2017-10-01T14:38:12\", \"amount\":\"20.0\", \"type\":\"FUEL\"}"]
+    }
+  },
+  "id": 2
+}</con:request><con:originalUri>http://localhost/chaincode</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method><con:method name="query" id="829fde38-33b8-4d48-9ec9-4c90e96a6795" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>application/json</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:cha="http://localhost/chaincode">cha:Response</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>application/json</con:mediaType><con:status>400</con:status><con:params/><con:element xmlns:cha="http://localhost/chaincode">cha:Fault</con:element></con:representation><con:request name="query" id="eb73b3ce-f22d-4254-acf1-a74b26525a87" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:7050</con:endpoint><con:request>{
+"jsonrpc": "2.0",
+  "method": "query",
+  "params": {
+    "type": 1,
+    "chaincodeID":{
+        "name": "eWallet"
+    },
+    "CtorMsg": {
+        "args": ["query","zh-2233"]
+    }
+  },
+  "id": 2
+}</con:request><con:originalUri>http://localhost/chaincode</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
