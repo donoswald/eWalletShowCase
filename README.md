@@ -48,4 +48,24 @@ Import the project to your favorite IDE and create a run configuration vor the C
 ```
 donoswald@notpad$ java $CLASS_PATH client.Car zh-123-456
 ```
+## Query the Blockchain
+To query the blockchain, it is best to act with [SOAP UI](https://www.soapui.org/) 
+Create a new endpoint to loclehost:7050/chaincode and execute the following POST request
+```
+{
+"jsonrpc": "2.0",
+  "method": "invoke",
+  "params": {
+    "type": 4,
+    "chaincodeID":{
+        "name": "eWallet"
+    },
+    "CtorMsg": {
+        "args": ["put","zh-2233", "{\"date\":\"2017-10-01T14:38:12\", \"amount\":\"20.0\", \"type\":\"FUEL\"}"]
+    }
+  },
+  "id": 1
+}
+```
+
 
